@@ -1,0 +1,112 @@
+.chatPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto; /* Chat content scrolls */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chat {
+  width: 50%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+p, li {
+  margin: 10px 0;
+}
+
+.message {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  max-width: 80%;
+
+  &.user {
+    background-color: #2c2937;
+    align-self: flex-end;
+  }
+
+  &.system {
+    background-color: #3e3b4a;
+    align-self: flex-start;
+  }
+}
+
+/* Styling the input form */
+.newForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px;
+  background-color: #2c2937;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 20px; /* Fixed above the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Input field styling */
+.newForm input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background-color: #1e1e2f;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 10px;
+  outline: none;
+}
+
+/* Submit button styling */
+.newForm button {
+  background-color: #4a47a3;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newForm button:hover {
+  background-color: #6763d4;
+}
+
+.newForm button img {
+  width: 20px;
+  height: 20px;
+}
+.title{
+  font-size: 30px;
+  font-style: italic;
+}
+.orbital {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  opacity: 0.05;
+  animation: 100s linear infinite rotateOrbital;
+  z-index: -1;
+}
